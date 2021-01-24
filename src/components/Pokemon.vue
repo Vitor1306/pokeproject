@@ -14,7 +14,7 @@
 
             <div class="media-content">
                 <p class="title is-4">{{num}} - {{name | upper}}</p>
-                <p class="subtitle is-6">{{ pokemon.type }}</p>
+                <p class="subtitle is-6">{{ pokemon.type | exp }}</p>
             </div>
             </div>
             <div class="content">
@@ -33,14 +33,15 @@ export default {
         axios.get(this.url).then(res => {
             this.pokemon.type = res.data.types[0].type.name;
             this.pokemon.front = res.data.sprites.front_default;
-
+            this.pokemon.exp = res.data.base_experience;
         })        
     },
     data(){
         return {
             pokemon: {
                 type: '',
-                front: ''
+                front: '',
+                exp: ''
 
             }
         }
@@ -48,7 +49,8 @@ export default {
     props: {
         num: Number,
         name: String,
-        url: String
+        url: String,
+        exp: Number
     },
     filters: {
         upper: function(value){

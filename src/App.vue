@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="column is-half is-offset-one-quarter">
-            <img src="./assets/pokelogo.png">
+            <img src="./assets/pokelogov2.png">
             <hr>
             <h4 class="is-size-4">Pokedex</h4>
             <input type="text" name="" id="" placeholder="Gotta catch em' all!" v-model="search" class="input is-rounded">
@@ -70,5 +70,10 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+
+  background :url(./assets/pokeback.png) no-repeat center top fixed;
+ 
+
+-webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;
 }
 </style>
