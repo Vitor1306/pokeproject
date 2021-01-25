@@ -12,9 +12,18 @@
         <Pokemon :name="poke.name" :url="poke.url" :num="index+1"/> 
       </div>      
     </div>
-  </div>
-</template>
+    <head>
+      <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
+            <h1 class="title">Testando</h1>
+          </div>
+        </div>
+      </section> 
+    </head>
+</div>
 
+</template>
 <script>
 import axios from 'axios';
 import Pokemon from './components/Pokemon';
@@ -64,11 +73,11 @@ export default {
 
 <style>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: fantasy;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: #e4e00f;
   margin-top: 60px;
 
   background :url(./assets/pokeback.png) no-repeat center top fixed;
